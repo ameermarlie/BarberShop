@@ -1,0 +1,322 @@
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #c0392b;
+  --accent-color: #b13434;
+  --text-color: #333;
+  --light-color: #ecf0f1;
+}
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings:"wdth" 100;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+nav {
+  background-color:transparent;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  font-weight: bold;
+  z-index: 1000;
+}
+ .ho{
+  text-decoration: none;
+  font-family: "Allura", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.logo {
+  color: white;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.nav-links a {
+  
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+  padding: 10px;
+  border-radius: 5px;
+  
+}
+
+.nav-links a:hover {
+  background-color: white;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.mobile-menu {
+  display: none;
+  background:none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.book-now-btn {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-bottom: 0px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.book-now-btn:hover {
+  color:rgba(0, 0, 0, 0.7);
+  background-color:white;
+}
+
+header {
+  height: 100vh;
+  background-image: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 1) 100%), 
+    url(images/banner.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-family: "Allura", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.cta-btn {
+  background-color: var(--accent-color);
+  font-weight: bold;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+  color:rgba(0, 0, 0, 0.7);
+  background-color:white;
+}
+
+#services {
+
+  padding: 4rem 2rem;
+  background-color: rgb(0, 0, 0);
+}
+#services h1{
+  color: white;
+  margin-left:48%;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.service-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgb(27, 27, 27);
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card img {
+
+  margin-bottom: 2rem;
+}
+.service-card h1 {
+
+  
+}
+#about {
+  
+  height: 100vh;
+  background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 1) 100%), 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 1) 100%), 
+    url(images/banner2.jpg);
+    background-color: rgba(0, 0, 0, 0.5); /* Adds overall opacity */
+    background-blend-mode: overlay; /* Blend the color with the image */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  color: white;
+}
+.aboutMeInfo {
+  margin-bottom: 0%;
+  margin-top: 0%;
+  margin-left: 5%;
+  width: 30%;
+  height:30%;
+  font-weight:350;
+  padding:20px;
+  color: white;
+
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2000;
+}
+
+.modal-content {
+  background-color: white;
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.submit-btn {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+
+#contact {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 80vh;
+  width: 100vw;
+  background-color: rgb(0, 0, 0);
+}
+
+@media (min-width: 300px) and (max-width: 1200px) {
+
+  #services h1{
+    color: white;
+    margin-left:30%;
+  }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color:rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+  .aboutMeInfo {
+
+    width: 70%;
+    height:30%;
+    font-size: 12px;
+    padding:20px;
+    color: white;
+  
+  }
+}

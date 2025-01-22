@@ -1,0 +1,120 @@
+html {
+  font-family: "JetBrains Mono", serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+}
+
+.contact-form {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #a4d3e2;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.container button {
+  margin-left: 35%;
+  width: 30%;
+  padding: 14px;
+  background: rgb(230, 98, 98);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-family: "JetBrains Mono", serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.container button:hover {
+  background: rgb(192, 67, 67);
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  width: 100vw;
+  background-color: black;
+}
+.footer div{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 20px;
+  }
+  .container {
+    width: 60%;
+    
+  }
+  .container button {
+    margin-left: 30%;
+    width: 50%;
+    padding: 14px;
+    background: rgb(230, 98, 98);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-family: "JetBrains Mono", serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  input,
+textarea {
+  width: 90%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+  
+}

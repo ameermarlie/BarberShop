@@ -1,0 +1,159 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classic Cuts Barbershop</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="form.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <section id="home">
+  <nav>
+    
+    <a class="ho" href="#home"><div class="logo">
+      <svg viewBox="0 0 100 100" width="50" height="50">
+        <path d="M50 5 L90 30 L90 70 L50 95 L10 70 L10 30 Z" fill="none" stroke="#fff" stroke-width="2"/>
+        <path d="M30 40 Q50 20 70 40 M40 60 L60 60" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      Classic Cuts
+    </div></a>
+    <button class="mobile-menu">
+      <i class="fas fa-bars"></i>
+    </button>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><button class="book-now-btn" onclick="openBookingModal()">Book Now</button></li>
+    </ul>
+  </nav>
+</section>
+  <header>
+    <div class="hero">
+      <h1>Classic Cuts Barbershop</h1>
+      <p>Where Style Meets Tradition</p>
+      <button class="cta-btn" onclick="openBookingModal()">Book Your Appointment</button>
+    </div>
+  </header>
+
+  <section id="services">
+    <h1>Services</h1>
+    <div class="services-grid">
+      <div class="service-card">
+        <img class="icon" src="images/haircut.png" alt="icon">        
+        <h3>Haircut</h3>
+        <p>R120</p>
+      </div>
+      <div class="service-card">
+        <img class="icon" src="images/shave.png" alt="icon">        
+        <h3>Shave</h3>
+        <p>R50</p>
+      </div>
+      <div class="service-card">
+        <img class="icon" src="images/haircutandshave.png" alt="icon">        
+        <h3>Haircut & Shave</h3>
+        <p>R150</p>
+      </div>
+      <div class="service-card">
+        <img class="icon" src="images/color.png" alt="icon">
+        <h3>Hair Color</h3>
+        <p>R250</p>
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <div class="aboutMeInfo">
+      <h1>About Us</h1>
+      <p>
+        At Classic Cuts, we believe a great haircut is more than just a trim—it's an experience. Established with the vision of blending timeless barbering traditions with modern techniques, our shop offers a welcoming space where style, comfort, and precision come together.
+      </p>
+      <p>
+        At Classic Cuts, we’re not just shaping hair; we’re crafting confidence. From modern trends to timeless classics, our services are designed to reflect your individuality. Our barbershop is a place where stories are shared, laughs are exchanged, and every client is treated like family.
+      </p>
+
+    </div>
+  </section>
+  <section id="contact">
+    <div class="container">
+      <form
+        id="contactForm"
+        class="contact-form"
+        action="https://formspree.io/f/movvopga"
+        method="POST"
+      >
+        <h1>Contact Us</h1>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <div id="bookingModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeBookingModal()">&times;</span>
+      <h2>Book an Appointment</h2>
+      <form id="bookingForm" onsubmit="handleBooking(event)">
+        <div class="form-group">
+          <label for="service">Service:</label>
+          <select id="service" required>
+            <option value="">Select a service</option>
+            <option value="haircut">Haircut - R120</option>
+            <option value="shave">Shave - R50</option>
+            <option value="both">Haircut & Shave - R150</option>
+            <option value="color">Hair Color - R250</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="date">Date:</label>
+          <input type="date" id="date" required>
+        </div>
+        <div class="form-group">
+          <label for="time">Time:</label>
+          <select id="time" required>
+            <option value="">Select a time</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" required>
+        </div>
+        <button type="submit" class="submit-btn">Confirm Booking</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+<footer class="footer">
+  <div><p style="color: white; font-weight: bold">Developed by&nbsp</p></div>
+  <div>
+    <p style=" color: rgb(230, 98, 98);; font-weight: bold">Mogamad Ameer Marlie&nbsp</p>
+  </div>
+  <div><p style="color: white; font-weight: bold">© 2025</p></div>
+</footer>
+</html>
